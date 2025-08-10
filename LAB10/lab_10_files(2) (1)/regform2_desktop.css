@@ -1,0 +1,46 @@
+/* Style the form to a fixed width */
+form {
+  width: 50em;
+}
+
+/* Style labels and input fields */
+label {
+  float: left;
+  text-align: right;
+  width: 10em;
+  margin-right: 1em;
+}
+input {
+  width: 50%;
+}
+
+/* Add margins to text input fields */
+.textinput {
+  margin: 10px;
+}
+
+/* Style for radio button input */
+.radioinput fieldset {
+  border: none;
+}
+.radioinput legend {
+  float: left;
+  text-align: right;
+  width: 9em;
+  margin-right: 1em;
+}
+.radioinput input {
+  width: 2em;
+}
+.radioinput label {
+  float: none;
+  text-align: left;
+}
+
+/* Style for buttons */
+.buttoninput {
+  text-align: right;
+}
+.buttoninput input {
+  width: auto;
+}
