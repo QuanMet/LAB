@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="description" content="Survey - Favorite Technologies" />
+    <meta name="keywords" content="Survey, HTML, Favorite Technologies" />
+    <meta name="author" content="Your Name" />
+    <title>Web Development Survey - Page 3</title>
+</head>
+<body>
+    <h1>Web Development Survey</h1>
+    <p>Please answer the following question:</p>
+
+    <!-- Form to collect favorite technologies -->
+    <form id="survey" method="post" action="survey04.html"> <!-- Action chỉ đến trang tiếp theo -->
+        <fieldset>
+            <legend>Favorite Technologies</legend>
+            <p>
+                <label for="q2">What technologies do you enjoy working with? (Select all that apply)</label><br />
+                <label for="html">HTML</label>
+                <input type="checkbox" name="q2[]" value="html" id="html" />
+                <label for="css">CSS</label>
+                <input type="checkbox" name="q2[]" value="css" id="css" />
+                <label for="js">JavaScript</label>
+                <input type="checkbox" name="q2[]" value="js" id="js" />
+                <label for="python">Python</label>
+                <input type="checkbox" name="q2[]" value="python" id="python" />
+            </p>
+
+            <p>
+                <input type="submit" value="Next" /> <!-- Nút này sẽ chuyển đến survey04.html -->
+                <input type="reset" value="Reset" /> <!-- Nút này sẽ làm mới form -->
+            </p>
+        </fieldset>
+    </form>
+
+    <a href="survey02.html">Previous Question</a>
+    <a href="survey04.html">Next Question</a> <!-- Chuyển đến câu hỏi tiếp theo -->
+</body>
+</html>

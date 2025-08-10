@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng nhập</title>
+    <link rel="stylesheet" href="style-desktop.css">
+    <link rel="stylesheet" href="style-mobile.css" media="(max-width: 480px)">
+</head>
+<body class="login-body fade-in">
+    <div class="login-container">
+        <div class="login-box">
+            <h2>Đăng nhập</h2>
+            <form id="login-form" method="post" onsubmit="login(); return false;" class="form-content">
+                <div class="input-group">
+                    <label for="email">Email hoặc số điện thoại</label>
+                    <input type="text" id="email" placeholder="Nhập email hoặc số điện thoại" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="password">Mật khẩu</label>
+                    <input type="password" id="password" placeholder="Nhập mật khẩu" required>
+                </div>
+
+                <button type="submit" class="btn login-btn">Đăng nhập</button>
+
+                <div class="forgot-password">
+                    <a href="#">Quên mật khẩu?</a>
+                </div>
+
+                <div class="divider">
+                    <span>hoặc</span>
+                </div>
+
+                <div class="forgot-password">
+                    <a href="register.html" class="create-account-btn">Tạo tài khoản mới</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Hàm login sẽ được gọi khi người dùng đăng nhập thành công
+        function login() {
+            // Lưu trạng thái đăng nhập vào localStorage
+            localStorage.setItem('isLoggedIn', 'true');
+            // Sau khi đăng nhập thành công, chuyển hướng về trang chính
+            window.location.href = 'main.html';
+        }
+    </script>
+</body>
+</html>

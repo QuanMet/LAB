@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="description" content="Survey - Favorite Programming Language" />
+    <meta name="keywords" content="Survey, HTML, Programming Language" />
+    <meta name="author" content="Your Name" />
+    <title>Web Development Survey - Page 2</title>
+</head>
+<body>
+    <h1>Web Development Survey</h1>
+    <p>Please answer the following question:</p>
+
+    <!-- Form to collect favorite programming language -->
+    <form id="survey" method="post" action="survey03.html"> <!-- Action chỉ đến trang tiếp theo -->
+        <fieldset>
+            <legend>Favorite Programming Language</legend>
+            <p>
+                <label for="q1">What is your favorite programming language?</label>
+                <select name="q1" id="q1">
+                    <option value="html">HTML</option>
+                    <option value="css">CSS</option>
+                    <option value="js">JavaScript</option>
+                    <option value="python">Python</option>
+                </select>
+            </p>
+
+            <p>
+                <input type="submit" value="Next" /> <!-- Nút này sẽ chuyển đến survey03.html -->
+                <input type="reset" value="Reset" /> <!-- Nút này sẽ làm mới form -->
+            </p>
+        </fieldset>
+    </form>
+
+    <a href="survey01.html">Previous Question</a>
+    <a href="survey03.html">Next Question</a> <!-- Chuyển đến câu hỏi tiếp theo -->
+</body>
+</html>

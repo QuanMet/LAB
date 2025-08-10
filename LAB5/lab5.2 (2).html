@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Solar System</title>
+    <style>
+        /* Basic styling for the webpage */
+        body {
+            font-family: 'Arial', sans-serif; /* Set font family for the entire page */
+            font-size: 16px; /* Set font size for the body */
+            background-color: #f0f0f0; /* Light gray background */
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Header styles */
+        header {
+            background-color: #3e8e41; /* Dark green background */
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        header h1 {
+            font-size: 36px; /* Larger font size for the title */
+        }
+
+        header p {
+            font-size: 18px; /* Smaller font size for the subtitle */
+        }
+
+        /* Main section */
+        main {
+            padding: 20px;
+        }
+
+        /* Planets Section */
+        .planets {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .planet {
+            width: 150px;
+            height: 150px;
+            margin: 15px;
+            background-color: #FFD700; /* Yellow color for the planets */
+            border-radius: 50%;
+            text-align: center;
+            padding: 10px;
+            color: #fff;
+            font-size: 20px;
+            border: 5px solid #000; /* Create a black border around the planets */
+        }
+
+        /* Add specific styles for individual planets */
+        #mercury {
+            background-color: #b5b5b5; /* Mercury's color */
+        }
+
+        #venus {
+            background-color: #f2c1a5; /* Venus's color */
+        }
+
+        #earth {
+            background-color: #3399ff; /* Earth color */
+        }
+
+        #mars {
+            background-color: #ff4d4d; /* Mars color */
+        }
+
+        #jupiter {
+            background-color: #ff9966; /* Jupiter color */
+        }
+
+        #saturn {
+            background-color: #ffcc00; /* Saturn color */
+        }
+
+        #uranus {
+            background-color: #00ccff; /* Uranus color */
+        }
+
+        #neptune {
+            background-color: #6600cc; /* Neptune color */
+        }
+
+        /* Footer Styles */
+        footer {
+            text-align: center;
+            background-color: #3e8e41; /* Same color as the header */
+            color: white;
+            padding: 10px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Welcome to the Solar System</h1>
+        <p>Learn about the planets in our solar system!</p>
+    </header>
+
+    <!-- Main content -->
+    <main>
+        <section>
+            <h2>Planets of the Solar System</h2>
+            <p>The solar system consists of 8 planets revolving around the Sun.</p>
+        </section>
+
+        <!-- Planets section -->
+        <section class="planets">
+            <div class="planet" id="mercury">
+                <h3>Mercury</h3>
+            </div>
+            <div class="planet" id="venus">
+                <h3>Venus</h3>
+            </div>
+            <div class="planet" id="earth">
+                <h3>Earth</h3>
+            </div>
+            <div class="planet" id="mars">
+                <h3>Mars</h3>
+            </div>
+            <div class="planet" id="jupiter">
+                <h3>Jupiter</h3>
+            </div>
+            <div class="planet" id="saturn">
+                <h3>Saturn</h3>
+            </div>
+            <div class="planet" id="uranus">
+                <h3>Uranus</h3>
+            </div>
+            <div class="planet" id="neptune">
+                <h3>Neptune</h3>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2023 Solar System Web Page</p>
+    </footer>
+
+</body>
+</html>

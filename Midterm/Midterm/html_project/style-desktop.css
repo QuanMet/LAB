@@ -1,0 +1,534 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    padding-top: 80px; 
+}
+
+/* Animation chung */
+.fade-in {
+    animation: fadeIn 1s ease-in-out;
+}
+
+.fade-in-img {
+    animation: fadeInUp 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+
+.navbar {
+    background-color: #0b74de;
+    padding: 12px 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+.navbar2 {
+    background-color: #0b74de;
+    padding: 12px 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+}
+
+/* Thay thế chữ "Logo" bằng ảnh logo */
+.logo img {
+    max-width: 150px; /* Giới hạn chiều rộng logo */
+    height: auto;
+}
+
+.menu a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: 500;
+    transition: all 0.3s;
+}
+
+.menu a:hover {
+    color: yellow;
+    transform: scale(1.1);
+}
+
+/* Content */
+.content {
+    padding: 100px 16px;
+    max-width: 900px;
+    margin: auto;
+}
+
+/* About section */
+.about-section, .contact-section {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.logo-container {
+    margin-bottom: 20px;
+}
+
+/* Logo trong phần giới thiệu */
+.hsb-logo {
+    max-width: 200px; /* Giới hạn chiều rộng logo */
+    height: auto;
+    margin-bottom: 15px;
+}
+
+
+
+/* Login page */
+.login-body {
+    background-image: url('https://i.pinimg.com/736x/f0/74/61/f07461135a0b5b1fef807edbc35363f9.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login-box {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+}
+
+.form-content {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-top: 5px;
+    box-sizing: border-box;
+}
+
+.btn {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.login-btn {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.login-btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.create-account-btn {
+    background-color: #28a745;
+    color: #fff;
+}
+
+.create-account-btn:hover {
+    background-color: #1e7e34;
+    transform: scale(1.05);
+}
+
+/* Căn chỉnh nút "Tạo tài khoản mới" */
+.forgot-password {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.create-account-btn {
+    background-color: #28a745;
+    color: #fff;
+    padding: 12px 24px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    text-align: center;
+    display: inline-block; /* Đảm bảo nút có kích thước đúng */
+    width: auto; /* Tự động căn chỉnh kích thước */
+}
+
+.create-account-btn:hover {
+    background-color: #1e7e34;
+    transform: scale(1.05);
+}
+
+.forgot-password a {
+    font-size: 14px;
+    color: #007bff;
+    text-decoration: none;
+}
+
+.forgot-password a:hover {
+    text-decoration: underline;
+}
+
+.divider {
+    text-align: center;
+    margin: 20px 0;
+    color: #888;
+}
+
+.divider span {
+    font-size: 14px;
+}
+
+/* Nút ở góc trái trên cùng */
+.top-left-btn {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    padding: 10px 20px;
+    background-color: transparent;
+    color: #007bff;
+    border: 2px solid #007bff;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.top-left-btn:hover {
+    background-color: #007bff;
+    color: white;
+    transform: scale(1.05);
+}
+
+/* Đảm bảo các nút nằm ở trên cùng */
+body {
+    position: relative;
+}
+
+/* Các service card */
+.services-container {
+    display: flex;
+    gap: 100px;
+    padding: 110px;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #f9f9f9;
+    margin-top: 100px;
+}
+
+.service-card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    width: 356px;
+    text-align: center;
+    padding: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.service-card h3 {
+    margin: 10px 0;
+    color: #007bff;
+}
+
+.service-card p {
+    color: #555;
+    font-size: 14px;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+}
+
+.service-card img {
+    width: 100%;
+    height: 200px; /* Hoặc kích thước bạn muốn */
+    object-fit: contain; /* Giữ tỉ lệ ảnh, không bị méo */
+}
+
+.join-btn {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(10px);
+    margin-top: 10px;
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.service-card:hover .join-btn {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Giới thiệu và Liên hệ */
+.contact-form {
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    display: inline-block;
+    max-width: 600px;
+    width: 100%;
+}
+
+.contact-form h3 {
+    font-size: 24px;
+    color: #007bff;
+    margin-bottom: 20px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.input-group label {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.input-group input,
+.input-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.input-group textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+.submit-btn {
+    background-color: #28a745;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.submit-btn:hover {
+    background-color: #218838;
+}
+
+.submit-btn:focus {
+    outline: none;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .logo img {
+        max-width: 120px;
+    }
+    .contact-form {
+        max-width: 100%;
+    }
+}
+
+.gradient-text {
+     font-family: 'Poppins', sans-serif;
+    font-size: 2.5em;
+    font-weight: bold;
+    background: linear-gradient(270deg, #ff7e5f, #feb47b, #86a8e7, #91eae4);
+    background-size: 800% 800%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientMove 6s ease infinite;
+}
+
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+html {
+    overflow-y: scroll;
+}
+.about-gallery {
+    display: flex;
+    gap: 100px;
+    padding: 110px;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #f9f9f9;
+    margin-top: 100px;
+}
+
+.about-card {
+    position: relative;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    width: 356px;
+    text-align: center;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-card img {
+    width: 100%;
+    height: 400px;
+    object-fit: contain;
+    border-radius: 8px;
+    display: block;
+}
+
+.about-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+}
+
+.overlay-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    padding: 15px;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    font-size: 16px;
+}
+
+.about-card:hover .overlay-text {
+    opacity: 1;
+}
+
+.about-title {
+    margin-top: 120px; /* để không bị header che */
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    opacity: 0;
+    transform: translateY(-30px);
+    animation: slideDownFade 1.2s ease forwards;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Tiêu đề hiện đầu tiên */
+.about-title {
+  opacity: 0;
+  animation: fadeUp 1s forwards;
+  animation-delay: 0.2s;
+}
+
+/* Ảnh hiện dần từng cái sau tiêu đề */
+.about-card {
+  opacity: 0;
+  animation: fadeUp 1s forwards;
+}
+
+/* Delay từng ảnh sau tiêu đề */
+.about-card:nth-child(1) {
+  animation-delay: 1s;
+}
+.about-card:nth-child(2) {
+  animation-delay: 1.4s;
+}
+.about-card:nth-child(3) {
+  animation-delay: 1.8s;
+}
+
+
+
+

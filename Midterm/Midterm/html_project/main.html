@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tài liệu - Phát triển ứng dụng web</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style-desktop.css">
+    <link rel="stylesheet" href="style-mobile.css" media="(max-width: 480px)">
+    
+</head>
+
+<body class="fade-in">
+
+<header class="navbar">
+    <div class="container">
+        <!-- Bao quanh logo với thẻ <a> để nó dẫn đến Trang chủ -->
+        <div class="logo">
+            <a href="main.html">
+                <img src="https://files.vnu.edu.vn/data/0/images/2025/05/08/upload_2/logo-hsb.jpg?w=1920&dpi=72" alt="Logo HSB" style="height: 50px;">
+            </a>
+        </div>
+        <nav class="menu">
+            <a href="main.html">Trang chủ</a>
+            <a href="about.html">Giới thiệu</a>
+            <a href="contact.html">Liên hệ</a>
+            <!-- Nút Đăng nhập/Đăng xuất -->
+            <a id="auth-btn" href="login.html">Đăng nhập</a> <!-- Nút này sẽ thay đổi -->
+        </nav>
+    </div>
+</header>
+
+<div class="title" style="text-align: center;">
+    <h1 class="gradient-text">Tài Liệu Phát Triển Ứng Dụng Web</h1> 
+</div>
+
+
+
+<main class="services-container">
+    <div class="service-card fade-in-img">
+        <img src="https://static.vecteezy.com/system/resources/previews/001/416/705/non_2x/html5-emblem-orange-shield-and-white-text-vector.jpg" alt="HTML">
+        <h3>Môn học HTML</h3>
+        <a href="#" class="join-btn">Tham gia</a>
+    </div>
+    <div class="service-card fade-in-img">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1452px-CSS3_logo_and_wordmark.svg.png" alt="CSS">
+        <h3>Môn học CSS</h3>
+        <a href="#" class="join-btn">Tham gia</a>
+    </div>
+    <div class="service-card fade-in-img">
+        <img src="https://images.seeklogo.com/logo-png/25/1/javascript-logo-png_seeklogo-255387.png" alt="Javascript">
+        <h3>Môn học Javascript</h3>
+        <a href="#" class="join-btn">Tham gia</a>
+    </div>
+</main>
+
+<script>
+    // Xử lý trạng thái đăng nhập
+    window.onload = function() {
+        var isLoggedIn = localStorage.getItem('isLoggedIn');
+        var authButton = document.getElementById('auth-btn');
+
+        if (isLoggedIn === 'true') {
+            authButton.innerText = 'Đăng xuất';
+            authButton.href = 'logout.html';
+        } else {
+            authButton.innerText = 'Đăng nhập';
+            authButton.href = 'login.html';
+        }
+    }
+
+    // Xử lý click nút "Tham gia"
+    const joinButtons = document.querySelectorAll('.join-btn');
+    joinButtons.forEach(button => {
+        button.addEventListener('click', function(event) {
+            event.preventDefault(); // Ngăn không cho load trang
+            alert("Đội ngũ đang phát triển thêm");
+        });
+    });
+
+    // Hàm đăng nhập
+    function login() {
+        localStorage.setItem('isLoggedIn', 'true');
+        window.location.href = 'main.html';
+    }
+
+    // Hàm đăng xuất
+    function logout() {
+        localStorage.removeItem('isLoggedIn');
+        window.location.href = 'main.html';
+    }
+</script>
+
+</body>
+</html>

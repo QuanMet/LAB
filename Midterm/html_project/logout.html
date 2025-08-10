@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng xuất</title>
+    <link rel="stylesheet" href="style-desktop.css">
+    <link rel="stylesheet" href="style-mobile.css" media="(max-width: 480px)">
+</head>
+<body>
+    <div class="logout-container">
+        <h2>Đã đăng xuất thành công!</h2>
+        <a href="main.html" class="btn login-btn">Quay lại Trang chủ</a>
+    </div>
+
+    <script>
+        // Hàm đăng xuất
+        window.onload = function() {
+            // Xóa trạng thái đăng nhập
+            localStorage.removeItem('isLoggedIn');
+            // Sau khi đăng xuất, chuyển hướng về trang chính
+            window.location.href = 'main.html';
+        }
+    </script>
+</body>
+</html>

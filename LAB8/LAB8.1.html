@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="description" content="Web development" />
+    <meta name="keywords" content="Registration Form, Password Help, Modal Window" />
+    <meta name="author" content="Your Name" />
+    <title>Web Development Registration Form</title>
+
+    <!-- Modal and form CSS styles -->
+    <style>
+        /* Basic form styling */
+        form {
+            width: 50em;
+            margin: auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            float: left;
+            text-align: right;
+            width: 10em;
+            margin-right: 1em;
+        }
+
+        input {
+            width: 50%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .textinput {
+            margin: 10px;
+        }
+
+        .buttoninput {
+            text-align: right;
+        }
+
+        .buttoninput input {
+            width: auto;
+        }
+
+        /* Styling the 'Password Rule' button */
+        .button {
+            border: 1px solid black;
+            border-radius: 6px;
+            background-color: lightgrey;
+            padding: 0.25em;
+            text-decoration: none;
+            cursor: pointer;
+            display: inline-block;
+            margin: 10px 0;
+        }
+
+        .button:hover {
+            background-color: darkgrey;
+        }
+
+        /* Modal window styling */
+        .window {
+            display: none;
+            z-index: 2;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            margin-top: -5em;
+            margin-left: -11em;
+            background-color: lightblue;
+            border-radius: 5px;
+            padding: 5px;
+            width: 22em;
+            height: 10em;
+        }
+
+        #scrnOverlay {
+            visibility: hidden;
+            z-index: 1;
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: grey;
+            opacity: 0.5;
+        }
+
+        /* Password rule list styling inside modal */
+        #pwdHelpWin p {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+
+        #pwdHelpWin ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        #pwdHelpWin ul li {
+            font-size: 1em;
+            margin-bottom: 5px;
+        }
+
+        #pwdHelpClose {
+            display: inline-block;
+            background-color: lightgrey;
+            padding: 0.25em;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-top: 10px;
+        }
+
+        #pwdHelpClose:hover {
+            background-color: darkgrey;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Registration Form -->
+    <form id="registrationForm" method="post" action="yourggdrive link/formtest.php">
+        <fieldset>
+            <legend>Account Information</legend>
+            <div class="textinput">
+                <label for="sid">User ID (Email)</label>
+                <input id="sid" type="email" name="sid" required placeholder="Enter your email (e.g., example@gmail.com)" />
+            </div>
+            <div class="textinput">
+                <label for="pwd1">Password</label>
+                <input id="pwd1" type="password" name="pwd1" required placeholder="Enter your password" />
+            </div>
+
+            <!-- Password Rule Button -->
+            <a href="#" id="pwdHelpBtn" class="button">Password Rule</a>
+
+            <!-- Password Rule List (Modal) -->
+            <div id="pwdHelpWin" class="window">
+                <p>Password must satisfy the following:</p>
+                <ul>
+                    <li>Must be at least 8 characters long</li>
+                    <li>Must contain at least 1 number</li>
+                    <li>Must contain both upper and lower case letters</li>
+                </ul>
+                <a href="#" id="pwdHelpClose" class="button">Close</a>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>User Information</legend>
+            <div class="textinput">
+                <label for="name">Name</label>
+                <input id="name" type="text" name="name" required />
+            </div>
+            <div class="radioinput">
+                <fieldset>
+                    <legend>Gender</legend>
+                    <input id="genm" type="radio" name="gender" value="M" />
+                    <label for="genm">Male</label>
+                    <input id="genf" type="radio" name="gender" value="F" />
+                    <label for="genf">Female</label>
+                </fieldset>
+            </div>
+        </fieldset>
+
+        <div class="buttoninput">
+            <input type="submit" value="Test Registration Form" />
+        </div>
+    </form>
+
+    <!-- Overlay (hidden by default) -->
+    <div id="scrnOverlay"></div>
+
+    <!-- Modal Window Script -->
+    <script>
+        // Function to show the modal window
+        function showPwdWin () {
+            var pwdHelpWin = document.getElementById("pwdHelpWin");
+            var scrnOverlay = document.getElementById("scrnOverlay");
+
+            pwdHelpWin.style.display = "block";
+            scrnOverlay.style.visibility = "visible";
+        }
+
+        // Function to hide the modal window
+        function hidePwdWin () {
+            var pwdHelpWin = document.getElementById("pwdHelpWin");
+            var scrnOverlay = document.getElementById("scrnOverlay");
+
+            pwdHelpWin.style.display = "none";
+            scrnOverlay.style.visibility = "hidden";
+        }
+
+        // Link functions to appropriate events of corresponding HTML elements
+        function init () {
+            var pwdHelpBtn = document.getElementById("pwdHelpBtn");
+            var pwdHelpClose = document.getElementById("pwdHelpClose");
+
+            // Show modal window when 'Password Rule' button is clicked
+            pwdHelpBtn.onclick = showPwdWin;
+
+            // Close the modal window when 'Close' button is clicked
+            pwdHelpClose.onclick = hidePwdWin;
+        }
+
+        // Execute the initialization function once the window is loaded
+        window.onload = init;
+
+        // Validate password input on form submission
+        document.getElementById('registrationForm').onsubmit = function(e) {
+            var pwd1 = document.getElementById('pwd1').value;
+            var email = document.getElementById('sid').value;
+            var passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[A-Za-z\d]{8,}$/;
+
+            // Validate password
+            if (!passwordRegex.test(pwd1)) {
+                alert("Password must be at least 8 characters long, contain at least 1 number, and include both upper and lower case letters.");
+                e.preventDefault();
+                return false;
+            }
+
+            // Validate email format
+            var emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+            if (!emailRegex.test(email)) {
+                alert("Please enter a valid email address.");
+                e.preventDefault();
+                return false;
+            }
+
+            return true;
+        };
+    </script>
+
+</body>
+</html>

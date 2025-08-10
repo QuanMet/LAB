@@ -1,0 +1,56 @@
+/* Style the form to a fixed width so the form looks the same even if the browser window is resized */
+form {
+    width: 40em;
+    margin: 0 auto;
+}
+
+/* Style the labels and input by aligning all input fields */
+label {
+    float: left;
+    text-align: right;
+    width: 10em;
+    margin-right: 1em;
+}
+
+input {
+    width: 50%;
+}
+
+/* Style text input to have spacing between input fields */
+.textinput {
+    margin: 10px;
+}
+
+/* Style radio button input to a single line note that declarations are inherited */
+.radioinput fieldset {
+    border: none;
+}
+
+.radioinput legend {
+    float: left;
+    text-align: right;
+    width: 9em;
+}
+
+.radioinput input {
+    width: 2em;
+}
+
+.radioinput label {
+    float: none;
+    text-align: left;
+}
+
+/* Style button input note that declarations are inherited */
+.buttoninput {
+    text-align: right;
+}
+
+.buttoninput input {
+    width: auto;
+}
+
+/* Highlight text input and password input on focus */
+input[type=text]:focus, input[type=password]:focus {
+    background-color: yellow;
+}

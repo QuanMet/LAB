@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Web Design with Tailwind & Bootstrap</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        /* Basic custom CSS */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Card Styling */
+        .card {
+            margin: 10px 0;
+        }
+
+        .card-body {
+            text-align: center;
+        }
+
+        .card img {
+            height: 150px;
+            object-fit: cover;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar using Bootstrap -->
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #333;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Solar System</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Planets</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content using Tailwind CSS -->
+    <main class="p-5">
+        <section class="text-center mb-5">
+            <h2 class="text-4xl font-bold mb-3">Explore The Solar System</h2>
+            <p class="text-lg text-gray-700">Discover interesting facts about planets in our solar system.</p>
+        </section>
+
+        <!-- Responsive Grid Layout with Tailwind -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            <!-- Planet 1 - Mercury -->
+            <div class="card bg-white shadow-lg">
+                <img src="https://i.pinimg.com/736x/57/e9/ac/57e9ac46e7eaa2d713fa044065dfc7b6.jpg" alt="Mercury" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title text-xl font-semibold">Mercury</h5>
+                    <p class="card-text text-gray-600">Mercury is the closest planet to the Sun.</p>
+                </div>
+            </div>
+
+            <!-- Planet 2 - Venus -->
+            <div class="card bg-white shadow-lg">
+                <img src="https://i.pinimg.com/736x/1b/42/bf/1b42bf39798f8c7d1baeab49b9de01f9.jpg" alt="Venus" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title text-xl font-semibold">Venus</h5>
+                    <p class="card-text text-gray-600">Venus is the second planet from the Sun.</p>
+                </div>
+            </div>
+
+            <!-- Planet 3 - Earth -->
+            <div class="card bg-white shadow-lg">
+                <img src="https://i.pinimg.com/736x/fe/16/70/fe16700e5852b9b9353d4ea8ff46c7df.jpg" alt="Earth" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title text-xl font-semibold">Earth</h5>
+                    <p class="card-text text-gray-600">Earth is the only planet known to support life.</p>
+                </div>
+            </div>
+
+            <!-- Planet 4 - Mars -->
+            <div class="card bg-white shadow-lg">
+                <img src="https://i.pinimg.com/736x/21/54/48/215448358af5d18d69e3564a79b31824.jpg" alt="Mars" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title text-xl font-semibold">Mars</h5>
+                    <p class="card-text text-gray-600">Mars is known as the Red Planet.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2023 Solar System Web Page. All rights reserved.</p>
+    </footer>
+
+    <!-- Bootstrap JS (necessary for responsive navbar) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

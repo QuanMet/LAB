@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liên hệ</title>
+    <link rel="stylesheet" href="style-desktop.css">
+    <link rel="stylesheet" href="style-mobile.css" media="(max-width: 480px)">
+</head>
+<body class="fade-in">
+
+<header class="navbar">
+    <div class="container">
+        <!-- Bao quanh logo với thẻ <a> để nó dẫn đến Trang chủ -->
+        <div class="logo">
+            <a href="main.html"> <!-- Chỉnh sửa đây để khi nhấn logo sẽ quay về Trang chủ -->
+                <img src="https://files.vnu.edu.vn/data/0/images/2025/05/08/upload_2/logo-hsb.jpg?w=1920&dpi=72" alt="Logo HSB" class="hsb-logo">
+            </a>
+        </div>
+        <nav class="menu">
+            <a href="main.html">Trang chủ</a>
+            <a href="about.html">Giới thiệu</a>
+            <a href="contact.html">Liên hệ</a>
+            <a href="login.html">Đăng Xuất</a>
+        </nav>
+    </div>
+</header>
+
+<main class="content">
+    <h1>Liên hệ với chúng tôi</h1>
+    <p>Chúng tôi luôn sẵn sàng hỗ trợ bạn! Hãy liên hệ với chúng tôi qua các phương thức dưới đây.</p>
+
+    <!-- Section Liên hệ -->
+    <section class="contact-section">
+        <h2>Thông tin liên hệ</h2>
+        <div class="contact-info">
+            <p><strong>Địa chỉ:</strong> 144 Xuân Thuỷ, Hà Nội</p>
+            <p><strong>Điện thoại:</strong> +84 123 456 789</p>
+            <p><strong>Email:</strong> met21080072@hsb.edu.vn</p>
+        </div>
+
+        <!-- Form Liên hệ -->
+        <div class="contact-form">
+            <h3>Gửi tin nhắn cho chúng tôi</h3>
+            <form id="contact-form" action="javascript:void(0)" method="POST" onsubmit="submitForm()">
+                <div class="input-group">
+                    <label for="name">Họ và tên</label>
+                    <input type="text" id="name" name="name" placeholder="Nhập họ và tên" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Nhập email" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="message">Tin nhắn</label>
+                    <textarea id="message" name="message" placeholder="Nhập tin nhắn" required></textarea>
+                </div>
+
+                <button type="submit" class="btn submit-btn">Gửi tin nhắn</button>
+            </form>
+        </div>
+
+        <!-- Thông báo thành công -->
+        <div id="success-message" style="display:none; color: green; text-align: center; margin-top: 20px;">
+            <p>Đã gửi tin nhắn thành công, chúng tôi sẽ phản hồi tới bạn trong thời gian sớm nhất.</p>
+        </div>
+    </section>
+</main>
+
+<script>
+    // Hàm gửi form và hiển thị thông báo thành công
+    function submitForm() {
+        // Ẩn form và hiển thị thông báo thành công
+        document.getElementById("contact-form").style.display = "none";
+        document.getElementById("success-message").style.display = "block";
+    }
+</script>
+
+</body>
+</html>

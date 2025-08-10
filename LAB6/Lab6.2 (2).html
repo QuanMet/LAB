@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Portfolio</title>
+    <style>
+        /* Step 1: Basic Styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+        }
+
+        /* Header */
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        header p {
+            font-size: 1.2em;
+            margin-top: 5px;
+        }
+
+        /* Navigation Bar */
+        nav {
+            background-color: #444;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.1em;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        /* Main Content */
+        main {
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 0;
+        }
+
+        /* About Section */
+        section#about {
+            flex: 0 0 60%;
+        }
+
+        section#about h2 {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        section#about p {
+            font-size: 1.2em;
+            color: #333;
+        }
+
+        /* Skills Section */
+        aside#skills {
+            flex: 0 0 30%;
+            background-color: #f8f8f8;
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        aside#skills h3 {
+            font-size: 1.8em;
+            margin-bottom: 15px;
+        }
+
+        aside#skills ul {
+            list-style-type: none;
+        }
+
+        aside#skills ul li {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 15px;
+            margin-top: 20px;
+        }
+
+        /* Step 3: Media Queries for Responsiveness */
+
+        /* Mobile and small screens */
+        @media screen and (max-width: 768px) {
+            /* Adjust navigation for smaller screens */
+            nav ul li {
+                display: block;
+                margin: 10px 0;
+            }
+
+            /* Stack the main content sections */
+            main {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            section#about {
+                flex: 0 0 100%;
+                margin-bottom: 20px;
+            }
+
+            aside#skills {
+                flex: 0 0 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Trinh Anh Quan</h1>
+        <p>Web Developer | Designer | Problem Solver</p>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <section id="about">
+            <h2>About Me</h2>
+            <p>Hello! I'm Trinh Anh Quan, a passionate web developer and designer with experience in creating responsive websites and applications. I love problem-solving and working with new technologies to deliver innovative solutions.</p>
+        </section>
+
+        <aside id="skills">
+            <h3>Top Skills</h3>
+            <ul>
+                <li>HTML, CSS, JavaScript</li>
+                <li>React, Node.js</li>
+                <li>UI/UX Design</li>
+                <li>Git & GitHub</li>
+                <li>Responsive Design</li>
+            </ul>
+        </aside>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 Trinh Anh Quan. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>

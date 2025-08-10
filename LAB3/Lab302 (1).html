@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Hướng dẫn xây dựng tài liệu HTML cơ bản">
+  <meta name="keywords" content="HTML, form, table, media">
+  <meta name="author" content="Huy Anh (Leo) He">
+  <title>Trang Web Của Tôi</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <h1>Chào Mừng Bạn Đến Với Trang Web Của Tôi</h1>
+  <p>Trang web này được tạo ra để hướng dẫn cách xây dựng một tài liệu HTML cơ bản với các phần tử như form, bảng, danh sách và media.</p>
+
+  <!-- Phần 1: Form thu thập thông tin người dùng -->
+  <h2>Điền Thông Tin Của Bạn</h2>
+  <form action="submit.php" method="POST">
+    <label for="username">Tên Người Dùng:</label>
+    <input type="text" id="username" name="username" placeholder="Nhập tên của bạn" required><br>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" placeholder="Nhập email của bạn" required><br>
+
+    <button type="submit">Gửi</button>
+  </form>
+
+  <!-- Phần 2: Bảng dữ liệu -->
+  <h2>Danh Sách Sản Phẩm</h2>
+  <table border="1">
+    <tr>
+      <th>Sản Phẩm</th>
+      <th>Giá</th>
+      <th>Số Lượng</th>
+    </tr>
+    <tr>
+      <td>Táo</td>
+      <td>$2.00</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <td>Chuối</td>
+      <td>$1.50</td>
+      <td>15</td>
+    </tr>
+    <tr>
+      <td>Cam</td>
+      <td>$3.00</td>
+      <td>12</td>
+    </tr>
+  </table>
+
+  <!-- Phần 3: Danh sách có thứ tự -->
+  <h2>Các Bước Làm Việc</h2>
+  <ol>
+    <li>Mở trình duyệt của bạn</li>
+    <li>Truy cập trang web này</li>
+    <li>Đọc thông tin và điền form</li>
+  </ol>
+
+  <!-- Phần 4: Danh sách không thứ tự -->
+  <h2>Danh Sách Các Món Trái Cây</h2>
+  <ul>
+    <li>Táo</li>
+    <li>Chuối</li>
+    <li>Cam</li>
+  </ul>
+
+  <!-- Phần 5: Nhúng Media - Hình ảnh -->
+  <h2>Hình Ảnh Về Thiên Nhiên</h2>
+  <img src="https://media-cdn-v2.laodong.vn/Storage/NewsPortal/2020/1/3/776318/Hoa-Qua-De-Len-Men.jpg" alt="Hoa Quả Để Lên Mén" style="width: 50%; height: auto;">
+
+  <!-- Phần 6: Nhúng Media - Video YouTube -->
+  <h2>Video Giới Thiệu Trang Web</h2>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/vY8YQEpyP78" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="description" content="Web development" />
+    <meta name="keywords" content="Registration Form" />
+    <meta name="author" content="put your name here" />
+    
+    <!-- Link to desktop CSS -->
+    <link rel="stylesheet" type="text/css" href="desktop.css">
+    
+    <!-- Link to tooltip CSS -->
+    <link rel="stylesheet" type="text/css" href="tooltip.css">
+    
+    <!-- Link to tooltip JavaScript -->
+    <script type="text/javascript" src="tooltip.js"></script>
+
+    <title>Web Development Registration Form</title>
+
+    <style>
+        /* Add CSS to make the heading text large and noticeable */
+        .highlight {
+            font-size: 36px;
+            color: #FF5733; /* A bright color for emphasis */
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Highlighted message at the top -->
+    <p class="highlight">This website was created by Trinh Anh Quan</p>
+
+    <form id="registerForm" method="post" action="yourGoogleDrive location/formtest.php" onsubmit="return validateForm()">
+        <p>Account Information</p>
+        <p>
+            <label for="sid" >User ID</label>
+            <input type="text" name="sid" id="sid" />
+            <!-- Tooltip for User ID -->
+            <span id="sidTip" class="tooltip">Enter your Student ID</span>
+        </p>
+        <p>
+            <label for="pwd1">Password</label>
+            <input type="password" name="pwd1" id="pwd1" />
+        </p>
+        <p>
+            <label for="pwd2">Retype Password</label>
+            <input type="password" name="pwd2" id="pwd2" />
+        </p>
+        <p>User Information</p>
+        <p>
+            <label for="username">Name</label>
+            <input type="text" name="username" id="username" />
+        </p>
+        <fieldset>
+            <legend>Gender</legend>
+            <label for="genderM">Male</label>
+            <input type="radio" name="gender" value="M" id="genderM" />
+            <label for="genderF">Female</label>
+            <input type="radio" name="gender" value="F" id="genderF"/>
+        </fieldset>
+        <p>
+            <input type="submit" value="Test Register" />
+        </p>
+    </form>
+
+    <script>
+        // JavaScript function to validate the password and retype password fields
+        function validatePasswords() {
+            var pwd1 = document.getElementById("pwd1").value;
+            var pwd2 = document.getElementById("pwd2").value;
+
+            // Check if the passwords match
+            if (pwd1 !== pwd2) {
+                alert("Passwords do not match. Please make sure both password fields are the same.");
+                return false; // Prevent form submission
+            }
+
+            // If passwords match, allow form submission
+            return true;
+        }
+
+        // Sample list of existing User IDs (this could come from a database in real applications)
+        var existingUserIDs = ["alice123", "bob456", "charlie789"];
+
+        // Function to validate the form
+        function validateForm() {
+            var userID = document.getElementById("sid").value;
+            var password = document.getElementById("pwd1").value;
+            var retypePassword = document.getElementById("pwd2").value;
+            var username = document.getElementById("username").value;
+            var genderM = document.getElementById("genderM").checked;
+            var genderF = document.getElementById("genderF").checked;
+
+            // Check if all fields are filled
+            if (userID == "" || password == "" || retypePassword == "" || username == "" || (!genderM && !genderF)) {
+                alert("Please fill in all the fields before registering.");
+                return false; // Prevent form submission
+            }
+
+            // Check if User ID already exists
+            if (existingUserIDs.includes(userID)) {
+                alert("The User ID is already taken. Please choose a different one.");
+                return false; // Prevent form submission
+            }
+
+            // Validate passwords (already done in validatePasswords function)
+            if (!validatePasswords()) {
+                return false;
+            }
+
+            // If everything is fine, redirect to the thank you page
+            window.location.href = "thankyou.html"; // Redirect to "thankyou.html"
+            return false; // Prevent form submission to server for this example
+        }
+    </script>
+</body>
+</html>
